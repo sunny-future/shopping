@@ -4,11 +4,19 @@ from conf import settings
 
 
 def action_choice():
+    """
+    打印功能列表
+    :return: 
+    """
     for ind, item in enumerate(settings.INFO.keys(), 1):
         print(ind, item)
 
 
 def main():
+    """
+    主程序入口，功能选择
+    :return:
+    """
     user = core.User()
     while 1:
         print(f" 欢迎来到德莱商城 ".center(80, '*'))

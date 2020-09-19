@@ -77,3 +77,12 @@
 2020-09-19 22:17:32,242 - ShoppingMall - DEBUG - 129 - core - zhangkai共消费39996.0元
 2020-09-19 22:17:37,747 - ShoppingMall - DEBUG - 129 - core - zhangkai共消费0元
 2020-09-19 22:17:39,820 - ShoppingMall - INFO - 142 - core - zhangkai已退出系统
+2020-09-19 22:25:24,887 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，barry登录失败！
+2020-09-19 22:25:36,153 - ShoppingMall - WARNING - 24 - core - 用户alex已存在，请重新输入！
+2020-09-19 22:25:42,485 - ShoppingMall - WARNING - 24 - core - 用户zhangkai已存在，请重新输入！
+2020-09-19 22:25:53,704 - ShoppingMall - INFO - 69 - core - zhangkai登录成功！
+2020-09-19 22:25:56,291 - ShoppingMall - INFO - 105 - core - zhangkai查看商品列表.
+2020-09-19 22:26:06,957 - ShoppingMall - INFO - 124 - core - zhangkai将3个mac加入购物车！
+2020-09-19 22:26:09,761 - ShoppingMall - INFO - 140 - core - zhangkai执行了查看购物车操作
+2020-09-19 22:26:11,534 - ShoppingMall - DEBUG - 163 - core - zhangkai共消费360.0元
+2020-09-19 22:26:12,984 - ShoppingMall - INFO - 180 - core - zhangkai已退出系统
