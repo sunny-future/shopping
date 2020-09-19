@@ -14,3 +14,10 @@
    - 退出 
      - 登录态，才可退出
     - 功能记录日志
+    
+ ### 安装
+ ```python
+git clone https://github.com/sunny-future/shopping.git
+cd shopping/bin
+python3 start.py
+```
