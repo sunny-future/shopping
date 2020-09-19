@@ -147,39 +147,44 @@ class User(object):
         结账，清空该用户的购物车
         :return:
         """
-        total = []
-        with open(settings.SHOPPING_CARS, mode='r', encoding='utf-8') as f1, \
-             open(settings.SHOPPING_CARS_TMP, mode='w', encoding='utf-8') as f2:
-            for line in f1:
-                user, commodity, price, nums = line.strip().split('|')
-                if user == self.user:
-                    total.append(float(price) * int(nums))
-                else:
-                    f2.write(line)
-        os.remove(settings.SHOPPING_CARS)
-        os.rename(settings.SHOPPING_CARS_TMP, settings.SHOPPING_CARS)
-        money = sum(total)
-        # print(f'{self.user}共消费{money}元')
-        log().debug(f'{self.user}共消费{money}元')
+        if self.is_login():
+            total = []
+            with open(settings.SHOPPING_CARS, mode='r', encoding='utf-8') as f1, \
+                 open(settings.SHOPPING_CARS_TMP, mode='w', encoding='utf-8') as f2:
+                for line in f1:
+                    user, commodity, price, nums = line.strip().split('|')
+                    if user == self.user:
+                        total.append(float(price) * int(nums))
+                    else:
+                        f2.write(line)
+            os.remove(settings.SHOPPING_CARS)
+            os.rename(settings.SHOPPING_CARS_TMP, settings.SHOPPING_CARS)
+            money = sum(total)
+            # print(f'{self.user}共消费{money}元')
+            log().debug(f'{self.user}共消费{money}元')
+        else:
+            self.login()
 
     def log_out(self):
         """
         退出系统
         :return:
         """
-        with open(settings.USER_INFO, mode='r', encoding='utf-8') as f1, \
-             open(settings.USER_INFO_TMP, mode='w', encoding='utf-8') as f2:
-            for line in f1:
-                user, password, login_status = line.strip().split('|')
-                if user == self.user:
-                    f2.write(f'{user}|{password}|unauthorized\n')
-                else:
-                    f2.write(line)
-        os.remove(settings.USER_INFO)
-        os.rename(settings.USER_INFO_TMP, settings.USER_INFO)
-        log().info(f'{self.user}已退出系统')
-        quit(f'下次再来哦')
-
+        if self.is_login():
+            with open(settings.USER_INFO, mode='r', encoding='utf-8') as f1, \
+                 open(settings.USER_INFO_TMP, mode='w', encoding='utf-8') as f2:
+                for line in f1:
+                    user, password, login_status = line.strip().split('|')
+                    if user == self.user:
+                        f2.write(f'{user}|{password}|unauthorized\n')
+                    else:
+                        f2.write(line)
+            os.remove(settings.USER_INFO)
+            os.rename(settings.USER_INFO_TMP, settings.USER_INFO)
+            log().info(f'{self.user}已退出系统')
+            quit(f'下次再来哦')
+        else:
+            self.login()
 
 if __name__ == '__main__':
     u = User()

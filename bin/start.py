@@ -6,7 +6,7 @@ from conf import settings
 def action_choice():
     """
     打印功能列表
-    :return: 
+    :return:
     """
     for ind, item in enumerate(settings.INFO.keys(), 1):
         print(ind, item)

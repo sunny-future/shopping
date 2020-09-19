@@ -86,3 +86,11 @@
 2020-09-19 22:26:09,761 - ShoppingMall - INFO - 140 - core - zhangkai执行了查看购物车操作
 2020-09-19 22:26:11,534 - ShoppingMall - DEBUG - 163 - core - zhangkai共消费360.0元
 2020-09-19 22:26:12,984 - ShoppingMall - INFO - 180 - core - zhangkai已退出系统
+2020-09-19 22:34:29,287 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，qw登录失败！
+2020-09-19 22:36:09,097 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，dwqd登录失败！
+2020-09-19 22:36:12,297 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，wqd登录失败！
+2020-09-19 22:36:17,048 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，d登录失败！
+2020-09-19 22:36:19,387 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，dqw登录失败！
+2020-09-19 22:36:21,658 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，qdw登录失败！
+2020-09-19 22:36:24,601 - ShoppingMall - DEBUG - 20 - core - dwq注册成功!
+2020-09-19 22:36:27,011 - ShoppingMall - ERROR - 73 - core - 用户名或密码错误，dw登录失败！
