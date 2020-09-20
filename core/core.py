@@ -60,6 +60,7 @@ class User(object):
                 if user == self.user and self.password == self.get_sha1(pwd):
                     f2.write(f'{user}|{self.password}|authorized\n')
                     login_flag = True
+                    break
                 else:
                     f2.write(line)
         os.remove(settings.USER_INFO)
@@ -136,8 +137,8 @@ class User(object):
                 for line in f:
                     user, commodity, price, nums = line.strip().split('|')
                     if user == self.user:
-                        print(line)
-                        log().info(f'{self.user}执行了查看购物车操作')
+                        print(line.strip())
+                log().info(f'{self.user}执行了查看购物车操作')
 
         else:
             self.login()
@@ -185,6 +186,7 @@ class User(object):
             quit(f'下次再来哦')
         else:
             self.login()
+
 
 if __name__ == '__main__':
     u = User()
