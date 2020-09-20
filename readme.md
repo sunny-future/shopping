@@ -13,8 +13,8 @@
      - 登录态，才可清空购物车
    - 退出 
      - 登录态，才可退出
-    - 功能记录日志
-    
+   - 功能记录日志
+     - 按天切割日志存储 
  ### 安装
  ```python
 git clone https://github.com/sunny-future/shopping.git
